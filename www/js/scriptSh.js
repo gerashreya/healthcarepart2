@@ -2,11 +2,11 @@ var agesMale = ["Kid(0-5) years", "Junior & Adolescent(6-16) years", "Young adul
 var agesFemale = ["Kid(0-5) years", "Junior & Adolescent(6-16) years", "Young adult(6-16) years", "Adult(30-64) years", "Senior(65+) years"];
 var agesTransgender = ["Kid(0-5) years", "Junior & Adolescent(6-16) years", "Young adult(6-16) years", "Adult(30-64) years", "Senior(65+) years"];
 
-var symptomsKid = ["Cough&Cold", "Fever", "Heart", "Brain"];
-var symptomsJunior = ["Cough&Cold", "Fever", "Heart", "Brain"];
-var symptomsYoung = ["Cough&Cold", "Fever", "Heart", "Brain"];
-var symptomsAdult = ["Cough&Cold", "Fever", "Heart", "Brain"];
-var symptomsSenior = ["Cough&Cold", "Fever", "Heart", "Brain"];
+var symptomsKid = ["Cough&Cold or ENT", "Teeth", "Eyes infection or anything related to eyes", "Skin related"];
+var symptomsJunior = ["Cough&Cold or ENT", "Teeth", "Eyes infection or anything related to eyes", "Skin related"];
+var symptomsYoung = ["Cough&Cold or ENT", "Teeth", "Eyes infection or anything related to eyes", "Skin related"];
+var symptomsAdult = ["Cough&Cold or ENT", "Teeth", "Eyes infection or anything related to eyes", "Skin related"];
+var symptomsSenior = ["Cough&Cold or ENT", "Teeth", "Eyes infection or anything related to eyes", "Skin related"];
 
 
 function genderChanged(gender) {
@@ -84,24 +84,59 @@ function ageChanged(age) {
     }
 }
 
+
 function symptomChanged(symptom) {
     switch (symptom) {
-        case "Cough&Cold":
-            document.getElementById('text').innerHTML ='Dr.Satguru';
-			document.getElementById('text1').innerHTML ='Dr.Suresh';
+        case "Cough&Cold or ENT":
+            document.getElementById('text').innerHTML =`
+Name:Dr. Christine Arquiza|
+Qual:Doctor of Medicine|
+Exp:25 years experience overall|
+Contact no.: +91-9994566123 `;
+			document.getElementById('text1').innerHTML =`
+Name:Dr. Angelica Embry|
+Qual:Doctor of Medicine|
+Exp:10 years experience overall|
+Contact no.: +91-9994566122`;
             break;
-        case "Fever":
-           document.getElementById('text').innerHTML ='Dr.Bhaskar';
-          document.getElementById('text1').innerHTML ='Dr.Ramesh';
+        case "Teeth":
+           document.getElementById('text').innerHTML =`
+Name:Dr. Teddy Gonzales|
+Qual:DMD - Doctor of Dental Medicine|
+Exp:5 years experience overall|
+Contact no.: +91-9994566125`;
+          document.getElementById('text1').innerHTML =`
+Name:Dr. Chrissy Thomas|
+Qual:DMD - Doctor of Dental Medicine|
+Exp:15 years experience overall|
+Contact no.: +91-9994566146`;
             break;
-        case "Heart":
-            document.getElementById('text').innerHTML ='Dr.Shaami';
-          document.getElementById('text1').innerHTML ='Dr.Neelam';
+        case "Eyes infection or anything related to eyes":
+            document.getElementById('text').innerHTML =`
+Name:Dr.B.K.Lohia|
+Qual: MBBS, MS - Ophthalmology|
+Exp:8 years experience overall|
+Contact no.: +91-9994566167`;
+          document.getElementById('text1').innerHTML =`
+Name:Dr. Neelam Shaikh|
+Qual: MBBS, MS - Ophthalmology|
+Exp:7 years experience overall|
+Contact no.: +91-9994566100`;
             break;
-        case "Brain":
-          document.getElementById('text').innerHTML ='Dr.Surya';
-          document.getElementById('text1').innerHTML ='Dr.Sameer';
+        case "Skin related":
+          document.getElementById('text').innerHTML =`
+Name :Dr.Rajeshwari K.A Bhatt|
+Qual: DNB, MD, MBBS,Dermatologist|
+Exp:3 years experience overall|
+Contact no.: +91-9994566345`;
+          document.getElementById('text1').innerHTML =`
+Name:Dr.Rasya Dixit|
+Qual:MD - Dermatology, MBBS|
+Exp:13 years experience overall|
+Contact no.: +91-9994566310`;
             break;
         default:
     }
+	
+
 }
